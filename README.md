@@ -57,8 +57,9 @@ MATLAB R2018a Udpate 6 (9.4.0.949201) 64-bit (win64)
 
 Simulink model: SimpleMass.slx
 
+Script: SimpleRotatinMass_script.m
+
 Simple model of the swing equation of a machine without damping windings. 
-It uses the script: SimpleRotatinMass_script.m
 It was used for obtaining the data for the figures:
 
   - Figure: phases of the frequency control, just the frequency
@@ -74,4 +75,4 @@ It was used for obtaining the data for the figures:
       - Basic info: H=5s (low inertia), shorter time for the secondary to start
       - Raw data file: SimpleMass_One_Raw.txt
 
-Be careful with the raw data files and the cases in the script. Case 1 if for high inertia, but the raw file was called "two" because it was as if there were two generator units in the system. The opposite happend with case 2, which is linked to the raw file "one". 
+Be careful with the raw data files and the cases in the script. Case 1 was for high inertia, but the raw file was called "two" because it was as if there were two generator units in the system. The opposite happend with case 2, which was linked to the raw file "one". 
