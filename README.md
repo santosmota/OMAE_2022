@@ -10,16 +10,47 @@ Model: 20201211_OMAE_BaseModel.pfd
   - Case 1: ESS is connected but does not contribute.
   - Case 2: ESS is connected and contribute with primary reserves (a slow and small secondary resposnse is tuned in the controller).
   - Case 3: ESS is connected and contribute wiht primary and inertial reserves (a slow and small secondary response is tuned in the controller).
-  - Case 4: same as case 3, but the feed-forward of current for the DC voltage controller is not active. This case did not receive a special name in the paper, it was still called case 3.
+  - Case 4: same as case 3, but the DC voltage controller current feed-forward is not active. This case did not receive a special name in the paper, it was still called case 3.
 
-### Struture of \*_ESS.csv
-to be done
+### Raw data files
+  - aaaammdd_Case_0\*_ESS.csv: ESS related measurements
+  - aaaammdd_Case_0\*_PCC.csv: Measurements at the PCC, but also at the wind turbines
+  - aaaammdd_Case_0\*_Freq.csv: Frequencies and speeds on the system
 
-### Struture of \*_PCC.csv
-to be done
+#### Structure of \*_ESS.csv
+  - time in seconds
+  - Vmesa_ESS_690V: voltage in pu of 690V
+  - ESS_GC: total power leaving the ac terminals of GC in MW
+  - PQ_Meas_BCs_CurrentSource: power arriving at the capacitor from ESDs in MW 
+  - ESS_GC: DC voltage in pu of 1200V 
+  - ESS_GC: DC current at terminals in pu of 8.333kA
+  - BC_DCLinkSide: DC current at the DC link side from the BC in pu of 3.5kA
+  - FC_DCLinkSide: DC current at the DC link side from the FCC  in pu of 5kA
 
-### Struture of \*_Freq.csv
-to be done
+#### Structure of \*_PCC.csv
+  - time in seconds
+  - GG_01: speed in pu
+  - GG_02: speed in pu
+  - PQ_Meas_GG01_11kV: active power in MW
+  - PQ_Meas_GG02_11kV: active power in MW
+  - PQ_Meas_RL01_11kV: active power in MW 
+  - PQ_Meas_RL02_11kV: active power in MW 
+  - PQ_Meas_WF_11kV: active power in pu in MW  
+  - PQ_Meas_ESS_TR_11kV: active power in MW  
+  - PQ_Meas_LV_Load_11kV: active power in MW  
+  - PQ_Meas_WT1_33kV: active power in MW  
+  - PQ_Meas_WT2_33kV: active power in MW  
+  - PQ_Meas_WT3_33kV: active power in MW  
+  - GG_01: voltage in pu of 11kV
+
+#### Structure of \*_Freq.csv
+  - time in seconds
+  - ESS 690V PLL Type 1 Model 3: frequency in pu
+  - PLL_WT1_690V_G: frequency in pu
+  - PLL_WT2_690V_G: frequency in pu
+  - PLL_WT3_690V_G: frequency in pu
+  - GG_01: mechanical speed in pu
+  - GG_02: mechanical speed in pu
 
 ## Matlab files
 MATLAB R2018a Udpate 6 (9.4.0.949201) 64-bit (win64)
